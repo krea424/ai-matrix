@@ -8,7 +8,7 @@
 - [x] **Task: Implement the Bocconi Calculation Engine** [b8057dc]
     - [ ] Write tests for feasibility and impact scoring logic (including malus rules).
     - [ ] Implement `calculateFeasibility` and `calculateImpact` functions.
-- [ ] **Task: Setup Centralized State Management (Zustand)**
+- [x] **Task: Setup Centralized State Management (Zustand)** [c9035b3]
     - [ ] Define the `useAssessmentStore` for managing initiative data and scores.
     - [ ] Implement LocalStorage persistence middleware.
 - [ ] **Task: Conductor - User Manual Verification 'Phase 1: Foundation & Core Logic' (Protocol in workflow.md)**
