@@ -5,7 +5,7 @@
     - [ ] Initialize project with App Router.
     - [ ] Configure Tailwind with the "Modern Dark" palette.
     - [ ] Install dependencies: `zustand`, `framer-motion`, `d3`, `lucide-react`.
-- [ ] **Task: Implement the Bocconi Calculation Engine**
+- [x] **Task: Implement the Bocconi Calculation Engine** [b8057dc]
     - [ ] Write tests for feasibility and impact scoring logic (including malus rules).
     - [ ] Implement `calculateFeasibility` and `calculateImpact` functions.
 - [ ] **Task: Setup Centralized State Management (Zustand)**
