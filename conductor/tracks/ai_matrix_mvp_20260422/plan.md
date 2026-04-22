@@ -1,7 +1,7 @@
 # Implementation Plan: Core Strategic Engine & Interactive Matrix MVP
 
 ## Phase 1: Foundation & Core Logic
-- [ ] **Task: Scaffold Next.js Project with Tailwind and TypeScript**
+- [x] **Task: Scaffold Next.js Project with Tailwind and TypeScript** [1de5464]
     - [ ] Initialize project with App Router.
     - [ ] Configure Tailwind with the "Modern Dark" palette.
     - [ ] Install dependencies: `zustand`, `framer-motion`, `d3`, `lucide-react`.
