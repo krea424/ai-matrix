@@ -14,12 +14,12 @@
 - [x] **Task: Conductor - User Manual Verification 'Phase 1: Foundation & Core Logic' (Protocol in workflow.md)** [4f8e403]
 
 ## Phase 2: Bespoke Strategic Visualization
-- [ ] **Task: Create the D3.js Strategic Matrix Component**
-    - [ ] Implement 3x3 grid rendering with responsive scaling.
-    - [ ] Add axes labels (Basso, Medio, Alto) and quadrant indicators.
-- [ ] **Task: Implement the Dynamic "Initiative Dot"**
-    - [ ] Connect Matrix to Zustand state.
-    - [ ] Use Framer Motion for smooth dot transitions between coordinates.
+- [x] **Task: Create the D3.js Strategic Matrix Component** [2292ba7]
+    - [x] Implement 3x3 grid rendering with responsive scaling.
+    - [x] Add axes labels (Basso, Medio, Alto) and quadrant indicators.
+- [x] **Task: Implement the Dynamic "Initiative Dot"** [2292ba7]
+    - [x] Connect Matrix to Zustand state.
+    - [x] Use Framer Motion for smooth dot transitions between coordinates.
 - [ ] **Task: Conductor - User Manual Verification 'Phase 2: Bespoke Strategic Visualization' (Protocol in workflow.md)**
 
 ## Phase 3: Smart Data Entry & Narrative
