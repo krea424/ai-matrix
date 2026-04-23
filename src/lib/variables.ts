@@ -1,7 +1,8 @@
 import { FeasibilityInputs, ImpactInputs } from './engine'
 
+// Generic VariableMeta definition
 export interface VariableMeta {
-  key: string
+  key: string // Kept as string for generality in the base interface
   label: string
   description: string
   scaleLabels: string[]
@@ -9,9 +10,15 @@ export interface VariableMeta {
   malusNote?: string
 }
 
-export const feasibilityVariables: VariableMeta[] = [
+// Type for feasibility variables, ensuring 'key' is a FeasibilityKey
+export type FeasibilityVariableMeta = Omit<VariableMeta, 'key'> & { key: FeasibilityKey }
+
+// Type for impact variables, ensuring 'key' is an ImpactKey
+export type ImpactVariableMeta = Omit<VariableMeta, 'key'> & { key: ImpactKey }
+
+export const feasibilityVariables: FeasibilityVariableMeta[] = [
   {
-    key: 'technicalMaturity',
+    key: 'technicalMaturity', // This string literal must match a key in FeasibilityInputs
     label: 'Maturità tecnica',
     description:
       'Valuta il livello di maturità della tecnologia AI considerata. Si basa sul grado di sviluppo e adozione della soluzione nel mercato.',
@@ -67,7 +74,7 @@ export const feasibilityVariables: VariableMeta[] = [
   },
 ]
 
-export const impactVariables: VariableMeta[] = [
+export const impactVariables: ImpactVariableMeta[] = [
   {
     key: 'businessConsistency',
     label: 'Coerenza di business',
@@ -107,5 +114,7 @@ export const impactVariables: VariableMeta[] = [
   },
 ]
 
+// These type exports are fine.
 export type FeasibilityKey = keyof FeasibilityInputs
 export type ImpactKey = keyof ImpactInputs
+
