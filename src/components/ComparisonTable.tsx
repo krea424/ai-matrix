@@ -59,7 +59,7 @@ const ComparisonTable: React.FC<{ className?: string }> = ({ className }) => {
               </td>
             </tr>
             {feasibilityVariables.map((v) => {
-              const scores = enabled.map((init) => (init.feasibility as Record<string, number>)[v.key] || 3)
+              const scores = enabled.map((init) => init.feasibility[v.key as keyof FeasibilityInputs] || 3)
               const best = Math.max(...scores)
               return (
                 <tr key={v.key} className="border-b border-rule-soft hover:bg-surface-hover/50 transition-colors">
