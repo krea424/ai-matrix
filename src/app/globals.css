@@ -1,28 +1,113 @@
 @import "tailwindcss";
 @config "../../tailwind.config.ts";
 
+/* ============================
+   Theme System — Light / Dark
+   ============================ */
+
+/* Light theme (default) */
 :root {
-  --background: #0B0E14;
-  --foreground: #ffffff;
-  --deep-obsidian: #0B0E14;
-  --charcoal-grey: #1A1D23;
+  --bg-app: #F5F7FA;
+  --bg-surface: #FFFFFF;
+  --bg-surface-hover: #F0F2F7;
+  --bg-inset: #EEF0F5;
+
+  --txt-ink: #111827;
+  --txt-ink-2: #4B5563;
+  --txt-ink-3: #9CA3AF;
+  --txt-ink-4: #D1D5DB;
+
+  --border-rule: rgba(0, 0, 0, 0.08);
+  --border-soft: rgba(0, 0, 0, 0.04);
+
+  --electric-cyan: #0891B2;
+  --amethyst-violet: #7C3AED;
+
+  --matrix-bg: #FAFBFE;
+  --matrix-grid: #DFE2EA;
+  --matrix-label: #6B7280;
+
+  --glow-cyan: rgba(8, 145, 178, 0.06);
+  --glow-violet: rgba(124, 58, 237, 0.06);
+
+  --zone-green-0: rgba(5, 150, 105, 0.06);
+  --zone-green-1: rgba(5, 150, 105, 0.12);
+  --zone-yellow: rgba(202, 138, 4, 0.06);
+  --zone-red-0: rgba(220, 38, 38, 0.04);
+  --zone-red-1: rgba(220, 38, 38, 0.07);
+
+  --shadow-card: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.03);
+  --shadow-elevated: 0 4px 12px rgba(0,0,0,0.06), 0 1px 3px rgba(0,0,0,0.04);
+}
+
+/* Dark theme */
+[data-theme="dark"] {
+  --bg-app: #0B0E14;
+  --bg-surface: #1A1D23;
+  --bg-surface-hover: #22262E;
+  --bg-inset: #141720;
+
+  --txt-ink: #F9FAFB;
+  --txt-ink-2: #9CA3AF;
+  --txt-ink-3: #6B7280;
+  --txt-ink-4: #374151;
+
+  --border-rule: rgba(255, 255, 255, 0.06);
+  --border-soft: rgba(255, 255, 255, 0.03);
+
   --electric-cyan: #00F5FF;
   --amethyst-violet: #BF40BF;
+
+  --matrix-bg: #0D1017;
+  --matrix-grid: #1A1D23;
+  --matrix-label: #4B5563;
+
+  --glow-cyan: rgba(0, 245, 255, 0.04);
+  --glow-violet: rgba(191, 64, 191, 0.04);
+
+  --zone-green-0: rgba(16, 185, 129, 0.06);
+  --zone-green-1: rgba(16, 185, 129, 0.10);
+  --zone-yellow: rgba(234, 179, 8, 0.06);
+  --zone-red-0: rgba(239, 68, 68, 0.04);
+  --zone-red-1: rgba(239, 68, 68, 0.06);
+
+  --shadow-card: 0 1px 3px rgba(0,0,0,0.3);
+  --shadow-elevated: 0 4px 12px rgba(0,0,0,0.4), 0 1px 3px rgba(0,0,0,0.3);
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --color-deep-obsidian: var(--deep-obsidian);
-  --color-charcoal-grey: var(--charcoal-grey);
+  /* Backgrounds */
+  --color-app: var(--bg-app);
+  --color-surface: var(--bg-surface);
+  --color-surface-hover: var(--bg-surface-hover);
+  --color-inset: var(--bg-inset);
+
+  /* Backward-compat aliases */
+  --color-deep-obsidian: var(--bg-app);
+  --color-charcoal-grey: var(--bg-surface);
+  --color-background: var(--bg-app);
+  --color-foreground: var(--txt-ink);
+
+  /* Text */
+  --color-ink: var(--txt-ink);
+  --color-ink-2: var(--txt-ink-2);
+  --color-ink-3: var(--txt-ink-3);
+  --color-ink-4: var(--txt-ink-4);
+
+  /* Borders */
+  --color-rule: var(--border-rule);
+  --color-rule-soft: var(--border-soft);
+
+  /* Accents */
   --color-electric-cyan: var(--electric-cyan);
   --color-amethyst-violet: var(--amethyst-violet);
+
+  /* Fonts */
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--bg-app);
+  color: var(--txt-ink);
 }
