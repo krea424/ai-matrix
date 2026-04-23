@@ -2,7 +2,7 @@
 
 import React from 'react'
 import { useAssessmentStore } from '@/store/useAssessmentStore'
-import { feasibilityVariables, impactVariables } from '@/lib/variables'
+import { feasibilityVariables, impactVariables, FeasibilityKey } from '@/lib/variables'
 import { calculateFeasibility, calculateImpact } from '@/lib/engine'
 
 function scoreColor(score: number): string {
@@ -59,7 +59,7 @@ const ComparisonTable: React.FC<{ className?: string }> = ({ className }) => {
               </td>
             </tr>
             {feasibilityVariables.map((v) => {
-              const scores = enabled.map((init) => init.feasibility[v.key as keyof FeasibilityInputs] || 3)
+              const scores = enabled.map((init) => init.feasibility[v.key as FeasibilityKey] || 3)
               const best = Math.max(...scores)
               return (
                 <tr key={v.key} className="border-b border-rule-soft hover:bg-surface-hover/50 transition-colors">
@@ -109,7 +109,7 @@ const ComparisonTable: React.FC<{ className?: string }> = ({ className }) => {
               </td>
             </tr>
             {impactVariables.map((v) => {
-              const scores = enabled.map((init) => (init.impact as Record<string, number>)[v.key] || 3)
+              const scores = enabled.map((init) => (init.impact as Record<string, number>)[v.key] || 3) // Note: impact uses Record<string, number> here, which is different from feasibility.
               const best = Math.max(...scores)
               return (
                 <tr key={v.key} className="border-b border-rule-soft hover:bg-surface-hover/50 transition-colors">
